@@ -1,0 +1,29 @@
+{
+  "name": "consuming_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardo-cas/consumig_api.git"
+  },
+  "keywords": [
+    "api",
+    "rest"
+  ],
+  "author": "Ricardo Costa Alves dos Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardo-cas/consumig_api/issues"
+  },
+  "homepage": "https://github.com/ricardo-cas/consumig_api#readme",
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
