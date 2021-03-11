@@ -9,21 +9,40 @@
   <body>
     <main>
       <h1>Consumindo dados de uma API</h1>
+      <div class="usersName"></div>
     </main>
   </body>
   <script>
     //   fetch api é uma API que existe no navegador (frontend) que consegue fazer comunicações com outros lugares
     async function getContent() {
       try {
-        //  como o fetch demora um pouco para exibir o resultado, isso é chamado de promisse (promessa)
+        //  como o fetch demora um pouco para exibir o resultado, isso é chamado de promise (promessa)
         //  então devemos utilizar o 'await', porém só podemo usar o 'await' dentro de funções asincronas (async)
         const response = await fetch("http://localhost:1010/");
+        // Retorna a resposta do fetch no console.
         console.log(response);
+        // esperando o response transformar os dados em JSON para assim exibir o conteúdo dos dados
+        const data = await response.json();
+        // exibindo no console os dados
+        // console.log(data);
+
+        show(data); // exibindo o conteúdo na tela
       } catch (error) {
         console.error(error);
         console.log("Algo deu errado");
       }
     }
     getContent();
+
+    function show(users) {
+      let output = "";
+
+      for (let user of users) {
+        //   concatenando a lista de resultados recebidos em JSON e enviando em forma de HTML, retirando somente a propriedade name dos dados
+        output += `<li>${user.name}</li>`;
+      }
+      //   Exibindo os dados na tela com o JavaScript
+      document.querySelector(".usersName").innerHTML = output;
+    }
   </script>
 </html>
