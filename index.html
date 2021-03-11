@@ -13,10 +13,15 @@
   </body>
   <script>
     //   fetch api é uma API que existe no navegador (frontend) que consegue fazer comunicações com outros lugares
-    async function getContent{
+    async function getContent() {
+      try {
         //  como o fetch demora um pouco para exibir o resultado, isso é chamado de promisse (promessa)
         //  então devemos utilizar o 'await', porém só podemo usar o 'await' dentro de funções asincronas (async)
-        const response = await fetch('http://localhost:1010/')
+        const response = await fetch("http://localhost:1010/");
+      } catch (error) {
+        console.error(error);
+      }
     }
+    getContent();
   </script>
 </html>
