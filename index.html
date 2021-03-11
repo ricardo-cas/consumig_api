@@ -18,8 +18,10 @@
         //  como o fetch demora um pouco para exibir o resultado, isso é chamado de promisse (promessa)
         //  então devemos utilizar o 'await', porém só podemo usar o 'await' dentro de funções asincronas (async)
         const response = await fetch("http://localhost:1010/");
+        console.log(response);
       } catch (error) {
         console.error(error);
+        console.log("Algo deu errado");
       }
     }
     getContent();

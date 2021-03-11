@@ -1,7 +1,8 @@
+const cors = require("cors");
 const express = require("express");
 const app = express();
-const cors = require("cors");
 
+// CORS é um controle de acesso para quando um servidor está conversando com outro
 app.use(cors());
 
 // Criando a rota padrão
