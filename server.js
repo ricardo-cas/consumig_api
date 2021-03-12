@@ -12,16 +12,8 @@ app.get("/", async (req, res) => {
 
   // response é a resposta do Axios MAS eu tiro o response do response
   const { data } = await axios("https://jsonplaceholder.typicode.com/users");
-  console.log(data);
 
-  return res.json([
-    { name: "Ricardo", id: 12093 },
-    {
-      name: "Indiara",
-      id: 12094,
-    },
-    { name: "Sônia", id: 10934 },
-  ]);
+  return res.json(data);
 });
 
 // ouvindo a API
